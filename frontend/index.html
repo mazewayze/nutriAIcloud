@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriAI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>NutriAI</h1>
+    <p>Test de communication entre le frontend et le backend.</p>
+    <button id="testButton">Tester le backend</button>
+    <p id="response"></p>
+
+    <!-- Formulaire pour les informations utilisateur -->
+    <h2>Soumettez vos informations</h2>
+    <form id="userForm">
+        <label for="goal">Objectifs de santé :</label>
+        <input type="text" id="goal" name="goal" placeholder="Ex : Perdre du poids" required><br>
+
+        <label for="allergies">Allergies :</label>
+        <input type="text" id="allergies" name="allergies" placeholder="Ex : Noix"><br>
+
+        <label for="preferences">Préférences alimentaires :</label>
+        <input type="text" id="preferences" name="preferences" placeholder="Ex : Végétarien"><br>
+
+        <button type="submit">Envoyer</button>
+    </form>
+    <p id="formResponse"></p>
+
+    <!-- Formulaire pour uploader un fichier -->
+    <h2>Uploader un fichier</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label for="file">Choisir un fichier :</label>
+        <input type="file" id="file" name="file" required><br>
+        <button type="submit">Uploader</button>
+    </form>
+    <p id="uploadResponse"></p>
+
+    <!-- Bouton pour générer le résumé -->
+    <h2>Générer un résumé</h2>
+    <button id="summaryButton">Générer le résumé</button>
+    <p id="summaryResponse"></p>
+
+    <!-- Formulaire pour traduire le résumé -->
+    <h2>Traduire le résumé</h2>
+    <label for="language">Choisir une langue :</label>
+    <select id="language">
+        <option value="en">Anglais</option>
+        <option value="es">Espagnol</option>
+        <option value="fr">Français</option>
+    </select>
+    <button id="translateButton">Traduire</button>
+    <p id="translationResponse"></p>
+
+    <!-- Formulaire pour analyser une image -->
+    <h2>Analyser une image</h2>
+    <form id="analyzeForm" enctype="multipart/form-data">
+        <label for="analyzeFile">Choisir une image :</label>
+        <input type="file" id="analyzeFile" name="file" required><br>
+        <button type="submit">Analyser</button>
+    </form>
+    <p id="analyzeResponse"></p>
+
+    <!-- Bouton pour générer des conseils nutritionnels -->
+    <h2>Obtenir des conseils nutritionnels</h2>
+    <button id="adviceButton">Générer des conseils</button>
+    <p id="adviceResponse"></p>
+
+    <script src="app.js"></script>
+</body>
+</html>
